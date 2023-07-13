@@ -1,0 +1,139 @@
+* {
+    display: border-box;
+    margin: 0;
+    padding: 0;
+}
+* ::before, ::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Pale: hsl(0, 0%, 98%);
+    --fnt-accent: hsl(234, 12%, 34%);
+    --fnt-main: hsl(229, 6%, 66%);
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: var(--Pale);
+    padding: 2rem;
+}
+
+header {
+    width: 37%;
+    margin-inline: auto;
+    padding: 2rem;
+    text-align: center;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    justify-content: center;
+}
+.card {
+    min-height: 11rem;
+    max-height: max-content;
+    max-width: 18rem;
+    min-width: 7rem;
+    padding: 2rem;
+    align-self: flex-start;
+}
+.side {
+    align-self: center;
+}
+.center {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.card {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background-color: white;
+    flex: 1;
+}
+.description {
+    flex: 1;
+}
+img {
+    align-self: self-end;
+}
+p, h1 {
+    color: var(--fnt-main);
+}
+p {
+    font-weight: 400;
+    margin-top: 0.75rem;
+}
+h2, h3 {
+    color: var(--fnt-accent);
+    font-weight: 600;
+}
+h1 {
+    font-weight: 200;
+}
+
+
+hgroup > * {
+    font-size: 36px;
+}
+h3 {
+    font-size: 20px;
+}
+
+.card {
+    box-shadow: 0 10px 15px 0 hsl(210, 31%, 85%); ;
+    border-radius: 0.5rem;  
+}
+.left {
+    border-top: 5px solid var(--Cyan);
+}
+.right {
+    border-top: 5px solid var(--Blue);
+}
+.top {
+    border-top: 5px solid var(--Red);
+}
+.bottom {
+    border-top: 5px solid var(--Orange);
+}
+
+.attribution { 
+    font-size: 11px; text-align: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1200px) {
+    header {
+        width: 75%;
+    } 
+}
+@media screen and (max-width: 780px) {
+    header {
+        width: 100%;
+        padding-inline: 0;
+    } 
+    hgroup > * {
+        font-size: 24px;
+    }
+    .card p {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 500px) {
+    main {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+}
